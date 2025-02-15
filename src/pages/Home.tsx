@@ -1,3 +1,4 @@
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
       <title>ZaicodeUI - Home</title>
 
       <Navbar/>
+      <Hero/>
     </>
   );
 }

@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
   return ( 
-    <header className="border-b border-gray-200">
+    <header className="border-b border-gray-200 fixed top-0 w-full z-50 bg-white">
       <nav className="mx-auto max-w-screen-xl py-4 flex justify-between px-4">
         <div className="flex gap-x-2">
           <LiaLaptopCodeSolid size={24}/> 
@@ -18,7 +18,7 @@ const Navbar = () => {
         </div>
 
 
-        <div className="hidden md:flex gap-x-4 items-center justify-center">
+        <div className="hidden lg:flex gap-x-4 items-center justify-center">
           <Link to={""} className="font-semibold text-sm hover:text-gray-700">Component</Link>
           <Link to={""} className="font-semibold text-sm hover:text-gray-700">Template</Link>
           <Link to={""} className="font-semibold text-sm hover:text-gray-700">Application UI</Link>
@@ -34,15 +34,14 @@ const Navbar = () => {
       </nav>
 
       { isMobileOpen && (
-          <div className="md:hidden top-12 flex flex-col space-y-4 mt-2 mb-4 text-start px-4">
+          <div className="lg:hidden top-12 flex flex-col space-y-4 mt-2 mb-4 text-start px-4">
               <Link to={""} className="font-semibold text-sm hover:text-gray-700">Component</Link>
               <Link to={""} className="font-semibold text-sm hover:text-gray-700">Template</Link>
               <Link to={""} className="font-semibold text-sm hover:text-gray-700">Application UI</Link>
           </div>
       )}
-    </header>
-      
-   );
+    </header>  
+   )
 }
  
-export default Navbar;
+export default Navbar
