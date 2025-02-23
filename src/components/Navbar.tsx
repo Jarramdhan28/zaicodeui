@@ -14,12 +14,12 @@ const Navbar = () => {
       <nav className="mx-auto max-w-screen-xl py-4 flex justify-between px-4">
         <div className="flex gap-x-2">
           <LiaLaptopCodeSolid size={24}/> 
-          <Link to={'/'} className="font-bold">ZaicodeUI</Link>
+          <Link to={"/"} className="font-bold">ZaicodeUI</Link>
         </div>
 
 
         <div className="hidden lg:flex gap-x-4 items-center justify-center">
-          <Link to={""} className="font-semibold text-sm hover:text-gray-700">Component</Link>
+          <Link to={"/components"} className="font-semibold text-sm hover:text-gray-700">Components</Link>
           <Link to={""} className="font-semibold text-sm hover:text-gray-700">Template</Link>
           <Link to={""} className="font-semibold text-sm hover:text-gray-700">Application UI</Link>
           <FaGithub size={26}/>
