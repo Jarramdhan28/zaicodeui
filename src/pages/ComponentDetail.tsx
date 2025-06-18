@@ -1,62 +1,54 @@
 import { useParams } from 'react-router-dom'
-import { componentsData } from '../data/components'
-import { copyToClipboard } from '../utils/CopyToClipboard'
-import Prism from 'prismjs'
-import 'prismjs/themes/prism-tomorrow.css'
-import 'prismjs/components/prism-markup'
-import { useState } from 'react'
+import { componentFiles } from '../data/componentIndex'
+import Navbar from '../components/navbar/Navbar'
+import { categoryMeta } from '../data/componentMeta'
+import PreviewHTML from '../components/previewHtml'
 
-const ComponentDetail: React.FC = () => {
-  const { id } = useParams<{ id: string }>()
-  const component = componentsData.find((comp) => comp.id === id)
-  const [copied, setCopied] = useState(false)
+const CategoryPage = () => {
+  const { category } = useParams()
+  const displayCategory = category
+    ? category.charAt(0).toUpperCase() + category.slice(1)
+    : 'Unknown Category'
 
-  if (!component) return <p>Components Not Found</p>
+  const components = componentFiles.filter(
+    (comp) => comp.category.toLowerCase() === category?.toLowerCase(),
+  )
 
-  const handleCopy = (code: string) => {
-    copyToClipboard(code)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+  if (components.length === 0) {
+    return (
+      <p className='p-6 text-gray-500'>
+        No components found for "{displayCategory}"
+      </p>
+    )
   }
 
+  const categoryDescription = categoryMeta[displayCategory]?.description
+
   return (
-    <div className='p-10'>
-      <h1 className='text-2xl font-bold'>{component.name}</h1>
-      <p className='text-gray-600'>{component.description}</p>
-
-      {component.components.map((compDetail) => {
-        return (
-          <div key={compDetail.id}>
-            <div className='mt-4 border p-4 rounded-lg bg-gray-100'>
-              <h2 className='text-lg font-bold mb-2'>Preview</h2>
-              <div dangerouslySetInnerHTML={{ __html: compDetail.code }} />
-            </div>
-
-            <div className='mt-4'>
-              <h2 className='text-lg font-bold mb-2'>Code</h2>
-              <pre className='bg-gray-900 text-white p-6 rounded-md overflow-x-auto'>
-                <code
-                  dangerouslySetInnerHTML={{
-                    __html: Prism.highlight(
-                      compDetail.code,
-                      Prism.languages.html,
-                      'html',
-                    ),
-                  }}
-                />
-              </pre>
-              <button
-                onClick={() => handleCopy(compDetail.code)}
-                className='mt-2 px-4 py-2 bg-blue-500 text-white rounded'
-              >
-                {copied ? 'Copied!' : 'Copy Code'}
-              </button>
-            </div>
+    <>
+      <Navbar />
+      <main className='mt-20'>
+        <div className='mx-auto max-w-screen-xl flex flex-col justify-center px-4 mb-20'>
+          <div className='mb-6'>
+            <h1 className='text-2xl font-semibold'>
+              {displayCategory} Components
+            </h1>
+            <p className='md:w-3/5 text-sm md:text-md text-gray-600'>
+              {categoryDescription}
+            </p>
           </div>
-        )
-      })}
-    </div>
+
+          <div className='grid grid-cols-1 space-y-10'>
+            {components.map((comp) => (
+              <div key={comp.file}>
+                <PreviewHTML file={comp.file} title={comp.title} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    </>
   )
 }
 
-export default ComponentDetail
+export default CategoryPage
