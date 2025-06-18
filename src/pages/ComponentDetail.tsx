@@ -3,6 +3,7 @@ import { componentFiles } from '../data/componentIndex'
 import Navbar from '../components/navbar/Navbar'
 import { categoryMeta } from '../data/componentMeta'
 import PreviewHTML from '../components/PreviewHTML'
+import Footer from '../components/Footer'
 
 const CategoryPage = () => {
   const { category } = useParams()
@@ -27,7 +28,8 @@ const CategoryPage = () => {
   return (
     <>
       <Navbar />
-      <main className='mt-20'>
+
+      <main className='mt-20 h-screen'>
         <div className='mx-auto max-w-screen-xl flex flex-col justify-center px-4 mb-20'>
           <div className='mb-6'>
             <h1 className='text-2xl font-semibold'>
@@ -47,6 +49,8 @@ const CategoryPage = () => {
           </div>
         </div>
       </main>
+
+      <Footer />
     </>
   )
 }

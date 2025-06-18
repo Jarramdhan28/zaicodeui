@@ -3,6 +3,7 @@ import Navbar from '../components/navbar/Navbar'
 import { ComponentFileMeta, componentFiles } from '../data/componentIndex'
 import ComponentCard from '../components/card/ComponentCard'
 import { categoryMeta } from '../data/componentMeta'
+import Footer from '../components/Footer'
 
 const Components = () => {
   const [search, setSearch] = useState('')
@@ -80,6 +81,8 @@ const Components = () => {
           )}
         </div>
       </main>
+
+      <Footer />
     </>
   )
 }
