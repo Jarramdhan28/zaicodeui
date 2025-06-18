@@ -106,7 +106,7 @@ const PreviewHTML: React.FC<PreviewHTMLProps> = ({ file, title }) => {
           </div>
         </div>
       ) : (
-        <CodeViewer code={html} language='html' />
+        <CodeViewer code={html} languange='html' />
       )}
     </>
   )

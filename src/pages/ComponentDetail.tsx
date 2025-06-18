@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { componentFiles } from '../data/componentIndex'
 import Navbar from '../components/navbar/Navbar'
 import { categoryMeta } from '../data/componentMeta'
-import PreviewHTML from '../components/previewHtml'
+import PreviewHTML from '../components/PreviewHTML'
 
 const CategoryPage = () => {
   const { category } = useParams()
