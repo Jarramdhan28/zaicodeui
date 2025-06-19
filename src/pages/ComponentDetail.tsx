@@ -29,7 +29,7 @@ const CategoryPage = () => {
     <>
       <Navbar />
 
-      <main className='mt-20 h-screen'>
+      <main className='mt-20'>
         <div className='mx-auto max-w-screen-xl flex flex-col justify-center px-4 mb-20'>
           <div className='mb-6'>
             <h1 className='text-2xl font-semibold'>

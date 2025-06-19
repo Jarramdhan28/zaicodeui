@@ -7,4 +7,8 @@ export const categoryMeta: Record<string, { image: string , description: string}
     image: "/thumbnails/components/alert.png",
     description: "Alert Components provide contextual feedback messages for typical user interactions. Designed with Tailwind CSS v4, these components come in multiple variants such as success, warning, error, and info."
   },
+  Cards: {
+    image: "/thumbnails/components/card.jpg",
+    description: "Card Components are flexible containers used to group related content and actions. Built with Tailwind CSS v4, cards support images, text, buttons, and custom layouts—ideal for dashboards, product listings, and content previews."
+  },
 }
