@@ -20,7 +20,7 @@ const Template = () => {
             Tailwind CSS Templates
           </p>
           <h2 className='font-bold text-2xl md:text-6xl mb-3'>
-            Ready-made templates for modern websites and clean design 🫩
+            Ready-made templates for modern websites and clean design 👨‍💻
           </h2>
           <h2 className='text-gray-500 text-sm md:text-md'>
             Browse a collection of modern, responsive templates. perfect for
