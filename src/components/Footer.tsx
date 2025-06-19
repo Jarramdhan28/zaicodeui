@@ -1,5 +1,6 @@
 import { FaGithub, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa'
 import { FaThreads } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 interface SosialMediaProps {
   href: string
@@ -51,7 +52,16 @@ const Footer = () => {
         <hr className='my-4 border-gray-100' />
         <div className='flex justify-between items-center '>
           <p className='text-xs w-3/5 text-gray-500'>
-            Created by Muhamad Fajar and Design Component ZaicodeUi.
+            Created by{' '}
+            <Link
+              to={'https://www.instagram.com/jarramdhan/'}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='font-semibold text-black hover:underline'
+            >
+              Muhamad Fajar
+            </Link>{' '}
+            and Design Component ZaicodeUi.
           </p>
           <div className='text-xs text-gray-500'>
             © {new Date().getFullYear()}. All rights reserved.
