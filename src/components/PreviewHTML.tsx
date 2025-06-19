@@ -17,22 +17,40 @@ const sizeStyles = {
 }
 
 const PreviewHTML: React.FC<PreviewHTMLProps> = ({ file, title }) => {
-  const [html, setHtml] = useState('')
+  const [rawHtml, setRawHtml] = useState('')
+  const [htmlWithTailwind, setHtmlWithTailwind] = useState('')
   const [view, setView] = useState<'preview' | 'code'>('preview')
   const [size, setSize] = useState<(typeof sizes)[number]>('full')
 
   useEffect(() => {
     fetch(`/${file}`)
       .then((res) => res.text())
-      .then(setHtml)
+      .then((htmlContent) => {
+        setRawHtml(htmlContent)
+        const fullHtml = `
+          <!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+              <style>body { margin: 0; padding: 1rem; }</style>
+            </head>
+            <body class="flex justify-center items-center">
+              ${htmlContent}
+            </body>
+          </html>
+        `
+        setHtmlWithTailwind(fullHtml)
+      })
       .catch(() =>
-        setHtml("<p class='text-red-500'>Failed to load preview.</p>"),
+        setRawHtml("<p class='text-red-500'>Failed to load preview.</p>"),
       )
   }, [file])
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(html)
+      await navigator.clipboard.writeText(rawHtml)
       toast.success('Copied to clipboard!', { icon: '📋' })
     } catch (err) {
       console.error('Failed to copy:', err)
@@ -54,15 +72,14 @@ const PreviewHTML: React.FC<PreviewHTMLProps> = ({ file, title }) => {
             <IoCopyOutline size={20} />
           </button>
 
-          {/* Size Switcher with Sliding Indicator (gaya View Switcher) */}
-          <div className=' bg-gray-100 rounded-lg mx-auto flex gap-1 w-full overflow-hidden'>
+          {/* Size Switcher */}
+          <div className='bg-gray-100 rounded-lg mx-auto flex gap-1 overflow-hidden'>
             {sizes.map((s) => (
               <button
                 key={s}
                 onClick={() => setSize(s)}
                 className={classNames(
-                  'text-sm font-medium text-center px-4 py-1 m-0.5 flex transition-colors duration-200',
-                  'rounded-lg',
+                  'text-sm font-medium text-center px-4 py-1 m-0.5 transition-colors duration-200 rounded-lg',
                   size === s
                     ? 'text-black bg-white shadow'
                     : 'text-gray-500 hover:text-black',
@@ -93,20 +110,21 @@ const PreviewHTML: React.FC<PreviewHTMLProps> = ({ file, title }) => {
         </div>
       </div>
 
-      {/* Content View */}
+      {/* Preview or Code View */}
       {view === 'preview' ? (
         <div className='w-full overflow-x-auto'>
           <div
-            className={`transition-all duration-300 ease-in-out border border-gray-200 rounded-xl p-4 mx-auto ${sizeStyles[size]}`}
+            className={`transition-all duration-300 ease-in-out border border-gray-200 rounded-xl p-2 mx-auto ${sizeStyles[size]}`}
           >
-            <div
-              dangerouslySetInnerHTML={{ __html: html }}
-              className='flex justify-center'
+            <iframe
+              srcDoc={htmlWithTailwind}
+              title='Preview'
+              className='w-full h-[500px]'
             />
           </div>
         </div>
       ) : (
-        <CodeViewer code={html} languange='html' />
+        <CodeViewer code={rawHtml} languange='html' />
       )}
     </>
   )
