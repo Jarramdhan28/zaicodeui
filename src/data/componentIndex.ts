@@ -43,4 +43,19 @@ export const componentFiles: ComponentFileMeta[] = [
     category: 'Cards',
     title: 'Product Card',
   },
+  {
+    file: 'components/html/card/card-profile.html',
+    category: 'Cards',
+    title: 'Profile Card',
+  },
+  {
+    file: 'components/html/card/card-category.html',
+    category: 'Cards',
+    title: 'Category Product Card',
+  },
+  {
+    file: 'components/html/card/card-pricing.html',
+    category: 'Cards',
+    title: 'Pricing Card',
+  },
 ]
