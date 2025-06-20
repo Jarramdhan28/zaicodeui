@@ -32,11 +32,11 @@ const SosialMediaLink: SosialMediaProps[] = [
 
 const Footer = () => {
   return (
-    <footer className='border-t border-gray-200 py-6'>
+    <footer className='border-t border-gray-200 py-6 px-4'>
       <div className='mx-auto max-w-screen-xl flex flex-col justify-center'>
         <div>
           <h2 className='font-semibold text-lg'>zaicodeui</h2>
-          <p className='w-1/2 text-sm text-gray-600'>
+          <p className='w-full md:w-1/2 text-sm text-gray-600'>
             zaicodeui offers a collection of ready-to-use Tailwind CSS
             components and stunning templates, making it easier and faster to
             build responsive and visually impressive websites.
@@ -50,8 +50,8 @@ const Footer = () => {
           </div>
         </div>
         <hr className='my-4 border-gray-100' />
-        <div className='flex justify-between items-center '>
-          <p className='text-xs w-3/5 text-gray-500'>
+        <div className='flex flex-col md:flex-row justify-between items-center '>
+          <p className='text-xs md:w-3/5 text-gray-500'>
             Created by{' '}
             <Link
               to={'https://www.instagram.com/jarramdhan/'}
