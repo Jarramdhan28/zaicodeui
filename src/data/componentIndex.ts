@@ -9,17 +9,17 @@ export const componentFiles: ComponentFileMeta[] = [
   {
     file: 'components/html/alert/alert.html',
     category: 'Alerts',
-    title: 'Base Alert'
+    title: 'Basic Alert'
   },
   {
     file: 'components/html/alert/alert-with-message.html',
     category: 'Alerts',
-    title: 'Base Alert With Messages'
+    title: 'Basic Alert With Messages'
   },
   {
     file: 'components/html/alert/alert-with-action.html',
     category: 'Alerts',
-    title: 'Base Alert With Action'
+    title: 'Basic Alert With Action'
   },
   // Button Components
   {
@@ -36,7 +36,7 @@ export const componentFiles: ComponentFileMeta[] = [
   {
     file: 'components/html/card/card.html',
     category: 'Cards',
-    title: 'Base Card'
+    title: 'Basic Card'
   },
   {
     file: 'components/html/card/card-product.html',
@@ -57,5 +57,20 @@ export const componentFiles: ComponentFileMeta[] = [
     file: 'components/html/card/card-pricing.html',
     category: 'Cards',
     title: 'Pricing Card',
+  },
+  {
+    file: 'components/html/badge/badge.html',
+    category: 'Badges',
+    title: 'Basic Badge',
+  },
+  {
+    file: 'components/html/badge/badge-outline.html',
+    category: 'Badges',
+    title: 'Badge Outline',
+  },
+  {
+    file: 'components/html/badge/badge-icon.html',
+    category: 'Badges',
+    title: 'Badge With Icon',
   },
 ]
