@@ -36,7 +36,7 @@ const PreviewHTML: React.FC<PreviewHTMLProps> = ({ file, title }) => {
               <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
               <style>body { margin: 0; padding: 1rem; }</style>
             </head>
-            <body class="flex justify-center items-center">
+            <body class="flex justify-center items-center gap-2">
               ${htmlContent}
             </body>
           </html>
