@@ -25,7 +25,10 @@ const Navbar = () => {
             target='_blank'
             label='Articles'
           />
-          <NavLink to={'/templates'} label='Donate' />
+          <NavLink
+            to={'https://sociabuzz.com/zaicodee/support'}
+            label='Donate'
+          />
           <FaGithub size={26} />
         </div>
 
@@ -46,7 +49,10 @@ const Navbar = () => {
             label='Articles'
             target='_blank'
           />
-          <NavLink to={'/templates'} label='Donate' />
+          <NavLink
+            to={'https://sociabuzz.com/zaicodee/support'}
+            label='Donate'
+          />
         </div>
       )}
     </header>
