@@ -32,6 +32,11 @@ export const componentFiles: ComponentFileMeta[] = [
     category: 'Buttons',
     title: 'Button Outline'
   },
+  {
+    file: 'components/html/button/button-icon.html',
+    category: 'Buttons',
+    title: 'Button With Icon'
+  },
   // Card Components
   {
     file: 'components/html/card/card.html',
