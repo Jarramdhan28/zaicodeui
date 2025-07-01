@@ -78,4 +78,15 @@ export const componentFiles: ComponentFileMeta[] = [
     category: 'Badges',
     title: 'Badge With Icon',
   },
+  // Navbar Components
+  {
+    file: 'components/html/navbar/navbar.html',
+    category: 'Navbars',
+    title: 'Basic Navbar',
+  },
+  {
+    file: 'components/html/navbar/navbar-center-link.html',
+    category: 'Navbars',
+    title: 'Navbar Center Link and Button Login',
+  },
 ]
