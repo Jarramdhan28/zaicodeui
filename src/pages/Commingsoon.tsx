@@ -6,7 +6,7 @@ const Commingsoon = () => {
       <div>
         <p className='text-9xl mb-4'>👻</p>
         <h1 className='text-4xl md:text-9xl font-extrabold mb-8'>
-          Comming Soon
+          Comings
         </h1>
 
         <Button to='/' variant='outline' size='sm'>
