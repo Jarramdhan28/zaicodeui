@@ -81,12 +81,50 @@ export const componentFiles: ComponentFileMeta[] = [
   // Navbar Components
   {
     file: 'components/html/navbar/navbar.html',
-    category: 'Navbars',
+    category: 'Navbar',
     title: 'Basic Navbar',
   },
   {
     file: 'components/html/navbar/navbar-center-link.html',
-    category: 'Navbars',
+    category: 'Navbar',
     title: 'Navbar Center Link and Button Login',
   },
+  // Form Components
+  {
+    file: 'components/html/form/basic-input.html',
+    category: 'Forms',
+    title: 'Basic Input',
+  },
+  {
+    file: 'components/html/form/textarea.html',
+    category: 'Forms',
+    title: 'Basic Textarea',
+  },
+  {
+    file: 'components/html/form/search.html',
+    category: 'Forms',
+    title: 'Search Input',
+  },
+  {
+    file: 'components/html/form/password.html',
+    category: 'Forms',
+    title: 'Password Input',
+  },
+  // Modal Components
+  {
+    file: 'components/html/modal/modal-delete.html',
+    category: 'Modals',
+    title: 'Delete Modal',
+  },
+  {
+    file: 'components/html/modal/modal-form.html',
+    category: 'Modals',
+    title: 'Form Modal',
+  },
+  // breadcrumb
+  {
+    file: 'components/html/breadcrumb/breadcrumb.html',
+    category: 'Breadcrumbs',
+    title: 'Basic Breadcrumb',
+  }
 ]
