@@ -126,5 +126,16 @@ export const componentFiles: ComponentFileMeta[] = [
     file: 'components/html/breadcrumb/breadcrumb.html',
     category: 'Breadcrumbs',
     title: 'Basic Breadcrumb',
+  },
+  //Alert Announcement
+  {
+    file: 'components/html/alert-announcement/basic.html',
+    category: 'Alerts Announcement',
+    title: 'Basic Alert Announcement',
+  },
+  {
+    file: 'components/html/alert-announcement/with-button-and-close.html',
+    category: 'Alerts Announcement',
+    title: 'Alert Announcement With Button and Close Button',
   }
 ]
