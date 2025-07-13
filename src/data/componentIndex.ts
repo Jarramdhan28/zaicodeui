@@ -58,11 +58,18 @@ export const componentFiles: ComponentFileMeta[] = [
     category: 'Cards',
     title: 'Category Product Card',
   },
+  // card pricing components
   {
-    file: 'components/html/card/card-pricing.html',
-    category: 'Cards',
+    file: 'components/html/card-pricing/simple-pricing.html',
+    category: 'Pricing',
+    title: 'Simple Pricing Card',
+  },
+  {
+    file: 'components/html/card-pricing/card-pricing.html',
+    category: 'Pricing',
     title: 'Pricing Card',
   },
+  // badge components
   {
     file: 'components/html/badge/badge.html',
     category: 'Badges',
@@ -130,12 +137,12 @@ export const componentFiles: ComponentFileMeta[] = [
   //Alert Announcement
   {
     file: 'components/html/alert-announcement/basic.html',
-    category: 'Alerts Announcement',
+    category: 'Announcement',
     title: 'Basic Alert Announcement',
   },
   {
     file: 'components/html/alert-announcement/with-button-and-close.html',
-    category: 'Alerts Announcement',
+    category: 'Announcement',
     title: 'Alert Announcement With Button and Close Button',
   }
 ]
