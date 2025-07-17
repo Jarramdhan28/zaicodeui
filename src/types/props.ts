@@ -18,8 +18,7 @@ export interface ShowcaseCardProps {
   toShow: string
   toTemplate: string
   categories: {
-    name: ReactNode
-    nama: string
+    name: string
     color: string
   }[]
 }
