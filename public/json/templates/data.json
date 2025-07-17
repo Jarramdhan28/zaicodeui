@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Zaicam",
+    "description": "Camera Product Website",
+    "image": "/thumbnails/templates/zaicam.png",
+    "toShow": "https://zaicam.vercel.app",
+    "toTemplate": "https://github.com/Jarramdhan28/zaicam",
+    "categories": [
+      {
+        "name" : "React",
+        "color" : "bg-purple-800"
+      },
+      {
+        "name" : "Tailwind",
+        "color": "bg-blue-400"
+      }
+    ]
+  }
+]

@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import ComponentDetail from './pages/ComponentDetail'
 import Components from './pages/Components'
 import NotFound from './pages/404'
-import Commingsoon from './pages/Commingsoon'
+import Templates from './pages/Templates.tsx'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           path='/components/:category'
           element={<ComponentDetail />}
         ></Route>
-        <Route path='/templates' element={<Commingsoon />} />
+        <Route path='/templates' element={<Templates />} />
       </Routes>
     </Router>
   )

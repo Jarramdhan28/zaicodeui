@@ -10,3 +10,18 @@ export interface ComponentCardProps {
   to: string
   image?: string
 }
+
+export interface ShowcaseCardProps {
+  title: string
+  description: string
+  image?: string
+  toShow: string
+  toTemplate: string
+  categories: {
+    name: ReactNode
+    nama: string
+    color: string
+  }[]
+}
+
+

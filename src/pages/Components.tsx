@@ -40,6 +40,7 @@ const Components = () => {
 
       <main className='mt-20'>
         <div className='mx-auto max-w-screen-xl flex flex-col justify-center px-4 mb-20'>
+          {/* Title */}
           <div className='md:w-3/4 mb-4'>
             <p className='text-xs md:text-sm text-gray-700'>
               UI Kit Components
@@ -49,7 +50,7 @@ const Components = () => {
               easily integrate into your projects.
             </h2>
           </div>
-
+          {/* Search Input */}
           <div className='flex justify-end items-center mb-2'>
             <input
               type='text'
@@ -60,10 +61,11 @@ const Components = () => {
             />
           </div>
 
+          {/* Card List Components */}
           {categories.length === 0 ? (
             <p className='text-gray-500'>No components found.</p>
           ) : (
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
               {categories.map(([categoryName, components]) => {
                 const image =
                   categoryMeta[categoryName]?.image ?? '/thumbnails/default.png'

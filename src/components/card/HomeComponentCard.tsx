@@ -17,7 +17,7 @@ const HomeComponentCard: React.FC<HomeComponentCardProps> = ({ filePath }) => {
 
   return (
     <div className='bg-white border border-gray-100 rounded-xl rotate-3 shadow hover:scale-105 hover:rotate-0 transition-transform duration-500'>
-      {/* Header dengan 3 dot */}
+      {/* Header 3 dot */}
       <div className='flex px-2 py-4 gap-1 '>
         <span className='bg-blue-500 w-3 h-3 rounded-full' />
         <span className='bg-purple-500 w-3 h-3 rounded-full' />

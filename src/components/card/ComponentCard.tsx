@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ComponentCardProps } from '../../types/props'
+import React from 'react'
 
 const ComponentCard: React.FC<ComponentCardProps> = ({
   title,
