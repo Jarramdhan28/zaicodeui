@@ -39,4 +39,8 @@ export const categoryMeta: Record<string, { image: string , description: string}
     image: "/thumbnails/components/navbar.png",
     description: "Navbar Components are essential UI elements used to organize and navigate your website’s primary sections. Built with Tailwind CSS v4, navbars are fully responsive, easy to customize, and support dropdowns, search bars, and action buttons—perfect for creating clear, intuitive navigation on any device."
   },
+  Section:{
+    image: "/thumbnails/components/section.jpg",
+    description: "Section Components are flexible, reusable UI blocks designed to organize content into distinct areas. Built with Tailwind CSS v4, sections support various layouts, backgrounds, and spacing options—ideal for structuring pages, enhancing readability, and improving overall user experience."
+  }
 }

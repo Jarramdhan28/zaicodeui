@@ -9,39 +9,39 @@ export const componentFiles: ComponentFileMeta[] = [
   {
     file: 'components/html/alert/alert.html',
     category: 'Alerts',
-    title: 'Basic Alert'
+    title: 'Basic Alert',
   },
   {
     file: 'components/html/alert/alert-with-message.html',
     category: 'Alerts',
-    title: 'Basic Alert With Messages'
+    title: 'Basic Alert With Messages',
   },
   {
     file: 'components/html/alert/alert-with-action.html',
     category: 'Alerts',
-    title: 'Basic Alert With Action'
+    title: 'Basic Alert With Action',
   },
   // Button Components
   {
     file: 'components/html/button/button.html',
     category: 'Buttons',
-    title: 'Button Primary'
+    title: 'Button Primary',
   },
   {
     file: 'components/html/button/button-outline.html',
     category: 'Buttons',
-    title: 'Button Outline'
+    title: 'Button Outline',
   },
   {
     file: 'components/html/button/button-icon.html',
     category: 'Buttons',
-    title: 'Button With Icon'
+    title: 'Button With Icon',
   },
   // Card Components
   {
     file: 'components/html/card/card.html',
     category: 'Cards',
-    title: 'Basic Card'
+    title: 'Basic Card',
   },
   {
     file: 'components/html/card/card-product.html',
@@ -144,5 +144,16 @@ export const componentFiles: ComponentFileMeta[] = [
     file: 'components/html/alert-announcement/with-button-and-close.html',
     category: 'Announcement',
     title: 'Alert Announcement With Button and Close Button',
-  }
+  },
+  // section components
+  {
+    file: 'components/html/section/basic-hero.html',
+    category: 'Section',
+    title: 'Basic Hero Section',
+  },
+  {
+    file: 'components/html/section/agency-hero.html',
+    category: 'Section',
+    title: 'Agency Hero Section',
+  },
 ]

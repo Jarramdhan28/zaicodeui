@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <>
       <div className='mx-auto max-w-screen-xl h-screen flex flex-col justify-center px-4 md:mt-14'>
-        <div className='flex justify-center items-center '>
+        <div className='flex justify-center items-center'>
           <div className='max-w-3xl'>
             <div className='mb-2 md:mb-6'>
               <h2 className='text-5xl lg:text-7xl text-center font-semibold mb-1'>
