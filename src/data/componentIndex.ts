@@ -156,4 +156,10 @@ export const componentFiles: ComponentFileMeta[] = [
     category: 'Section',
     title: 'Agency Hero Section',
   },
+  // table components
+  {
+    file: 'components/html/table/base-table.html',
+    category: 'Table',
+    title: 'Basic Table',
+  }
 ]
