@@ -161,5 +161,10 @@ export const componentFiles: ComponentFileMeta[] = [
     file: 'components/html/table/base-table.html',
     category: 'Table',
     title: 'Basic Table',
+  },
+  {
+    file: 'components/html/table/border-table.html',
+    category: 'Table',
+    title: 'Border Rounded Table',
   }
 ]
