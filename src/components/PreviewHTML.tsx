@@ -39,6 +39,7 @@ const PreviewHTML: React.FC<PreviewHTMLProps> = ({ file, title }) => {
             <body class="flex justify-center items-center gap-2">
               ${htmlContent}
             </body>
+            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
           </html>
         `
         setHtmlWithTailwind(fullHtml)

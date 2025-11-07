@@ -1,18 +1,17 @@
 import { useParams } from 'react-router-dom'
-import { componentFiles } from '../data/componentIndex'
-import Navbar from '../components/navbar/Navbar'
-import { categoryMeta } from '../data/componentMeta'
-import PreviewHTML from '../components/PreviewHTML'
-import Footer from '../components/Footer'
+import { ComponentIndexAlpine } from '../../data/component-alpine/componentIndex'
+import { categoriesAlpineComponents } from '../../data/component-alpine/cetegories'
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/Footer'
+import PreviewHTML from '../../components/PreviewHTML'
 
-const CategoryPage = () => {
+const AlpineComponentDetail = () => {
   const { category } = useParams()
   const displayCategory = category
     ? category.charAt(0).toUpperCase() + category.slice(1)
-    : 'Unknown Category'
-
-  const components = componentFiles.filter(
-    (comp) => comp.category.toLowerCase() === category?.toLowerCase(),
+    : 'Unknow Component Alpine jS'
+  const components = ComponentIndexAlpine.filter(
+    (comp) => comp.category.toLowerCase() == category?.toLowerCase(),
   )
 
   if (components.length === 0) {
@@ -23,12 +22,11 @@ const CategoryPage = () => {
     )
   }
 
-  const categoryDescription = categoryMeta[displayCategory]?.description
-
+  const categoryDescription =
+    categoriesAlpineComponents[displayCategory]?.description
   return (
     <>
       <Navbar />
-
       <main className='mt-20'>
         <div className='mx-auto max-w-screen-xl flex flex-col justify-center px-4 mb-20'>
           <div className='mb-6'>
@@ -49,10 +47,9 @@ const CategoryPage = () => {
           </div>
         </div>
       </main>
-
       <Footer />
     </>
   )
 }
 
-export default CategoryPage
+export default AlpineComponentDetail

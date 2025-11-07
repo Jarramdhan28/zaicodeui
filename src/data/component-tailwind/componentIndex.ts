@@ -4,7 +4,7 @@ export interface ComponentFileMeta {
   title: string
 }
 
-export const componentFiles: ComponentFileMeta[] = [
+export const componentIndex: ComponentFileMeta[] = [
   // Alerts Components
   {
     file: 'components/html/alert/alert.html',
@@ -166,5 +166,5 @@ export const componentFiles: ComponentFileMeta[] = [
     file: 'components/html/table/border-table.html',
     category: 'Table',
     title: 'Border Rounded Table',
-  }
+  },
 ]

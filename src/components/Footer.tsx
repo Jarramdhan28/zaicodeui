@@ -37,11 +37,20 @@ const Footer = () => {
         <div>
           <h2 className='font-semibold text-lg'>zaicodeui</h2>
           <p className='w-full md:w-1/2 text-sm text-gray-600'>
-            zaicodeui offers a collection of ready-to-use Tailwind CSS
-            components and stunning templates, making it easier and faster to
-            build responsive and visually impressive websites.
+            zaicodeui provides Tailwind CSS and Alpine.js component UI that can
+            be used easily without any configuration and you can use it for
+            free, besides that it provides ready to use website templates.
           </p>
           <div className='flex items-center gap-2 mt-2 text-gray-950'>
+            <Link
+              to={'https://sociabuzz.com/zaicodee/support'}
+              target='_blank'
+              className={
+                'border border-gray-400 px-2 py-1 rounded-md text-xs hover:bg-gray-100'
+              }
+            >
+              Donate
+            </Link>
             {SosialMediaLink.map((item) => (
               <a href={item.href} target='_blank' rel='noopener noreferrer'>
                 {item.icon}

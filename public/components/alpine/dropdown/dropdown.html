@@ -1,0 +1,27 @@
+<div x-data="{ open: false }" class="relative">
+  <button
+    x-on:click="open = ! open"
+    class="px-4 py-1.5 rounded-lg bg-black text-white"
+  >
+    Dropdown Button
+  </button>
+
+  <div
+    x-show="open"
+    @click.outside="open = false"
+    x-transition
+    class="absolute shadow mt-1 rounded-lg border border-gray-100 p-2 w-full bg-white"
+  >
+    <ul class="space-y-0.5">
+      <li class="hover:bg-gray-100 px-2 py-1 rounded-lg">
+        <a href="#">View</a>
+      </li>
+      <li class="hover:bg-gray-100 px-2 py-1 rounded-lg">
+        <a href="#">Edit</a>
+      </li>
+      <li class="hover:bg-gray-100 px-2 py-1 rounded-lg">
+        <a href="#">Delete</a>
+      </li>
+    </ul>
+  </div>
+</div>

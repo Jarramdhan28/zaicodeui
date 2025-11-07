@@ -4,15 +4,21 @@ import { HeroCardProps } from '../../types/props'
 
 const HeroDataCard: HeroCardProps[] = [
   {
-    title: 'Tailwind CSS Components',
+    title: 'Tailwind CSS V4 UI Components',
     description:
-      'A collection of pre-designed Tailwind CSS components that you can easily integrate into your projects.',
+      'A collection of Tailwind CSS components that are ready for you to use easily',
     icon: '✢',
+  },
+  {
+    title: 'Alpine.js UI Components',
+    description:
+      'A collection of components with Alpine.js that are ready for you to use easily',
+    icon: '❄︎',
   },
   {
     title: 'Tailwind CSS Templates',
     description:
-      'Browse a collection of modern, responsive templates. perfect for landing pages, dashboards, and more.',
+      'A collection of responsive website templates that you can use',
     icon: '⛵︎',
   },
 ]
@@ -28,14 +34,15 @@ const Hero = () => {
                 Craft Beautiful UI Without the Hassle!
               </h2>
               <p className='text-sm md:text-md text-center text-gray-500'>
-                zaicodeui offers a collection of ready-to-use Tailwind CSS
-                components and stunning templates, making it easier and faster
-                to build responsive and visually impressive websites.
+                zaicodeui provides Tailwind CSS and Alpine.js component UI that
+                can be used easily without any configuration and you can use it
+                for free, besides that it provides ready to use website
+                templates.
               </p>
             </div>
             <div className='flex justify-center gap-3 items-center'>
               <Button
-                to={'/components'}
+                to={'/tailwindui-components'}
                 variant='primary'
                 size='md'
                 className='text-xs'
@@ -54,7 +61,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className='hidden md:grid mx-auto max-w-screen-lg grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center mt-12 md:mt-16'>
+        <div className='hidden md:grid mx-auto max-w-screen-2xl grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center mt-12 md:mt-16'>
           {HeroDataCard.map((card, index) => (
             <HeroCard
               key={index}

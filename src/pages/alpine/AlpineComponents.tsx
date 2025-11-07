@@ -1,39 +1,41 @@
+import Navbar from '../../components/navbar/Navbar.tsx'
+import Footer from '../../components/Footer.tsx'
 import { useState } from 'react'
-import Navbar from '../components/navbar/Navbar'
-import { ComponentFileMeta, componentFiles } from '../data/componentIndex'
-import ComponentCard from '../components/card/ComponentCard'
-import { categoryMeta } from '../data/componentMeta'
-import Footer from '../components/Footer'
+import {
+  ComponentIndexAlpine,
+  ComponentMeta,
+} from '../../data/component-alpine/componentIndex.ts'
+import ComponentCard from '../../components/card/ComponentCard.tsx'
+import { categoriesAlpineComponents } from '../../data/component-alpine/cetegories.ts'
 
-const Components = () => {
+const AlpineComponents = () => {
   const [search, setSearch] = useState('')
 
-  const groupedByCategory = componentFiles.reduce(
+  const groupCategory = ComponentIndexAlpine.reduce(
     (acc, item) => {
       if (!acc[item.category]) acc[item.category] = []
       acc[item.category].push(item)
       return acc
     },
-    {} as Record<string, ComponentFileMeta[]>,
+    {} as Record<string, ComponentMeta[]>,
   )
 
-  const filteredGrouped = Object.entries(groupedByCategory).reduce(
+  const filteredGrouped = Object.entries(groupCategory).reduce(
     (acc, [category, components]) => {
       const filteredComponents = components.filter((comp) =>
-        comp.category.toLowerCase().includes(search.toLowerCase()),
+        comp.category.toLowerCase().includes(search.toLocaleLowerCase()),
       )
       if (filteredComponents.length > 0) {
         acc[category] = filteredComponents
       }
       return acc
     },
-    {} as Record<string, ComponentFileMeta[]>,
+    {} as Record<string, ComponentMeta[]>,
   )
 
   const categories = Object.entries(filteredGrouped).sort(([a], [b]) =>
     a.localeCompare(b),
   )
-
   return (
     <>
       <Navbar />
@@ -43,14 +45,13 @@ const Components = () => {
           {/* Title */}
           <div className='md:w-3/4 mb-4'>
             <p className='text-xs md:text-sm text-gray-700'>
-              UI Kit Components
+              Alpine.js Components
             </p>
             <h2 className='text-2xl md:text-4xl'>
-              A collection of pre-designed Tailwind CSS components that you can
-              easily integrate into your projects.
+              A collection of components with Alpine.js that are ready for you
+              to use easily by just copying and pasting
             </h2>
           </div>
-          {/* Search Input */}
           <div className='flex justify-end items-center mb-2'>
             <input
               type='text'
@@ -61,19 +62,19 @@ const Components = () => {
             />
           </div>
 
-          {/* Card List Components */}
           {categories.length === 0 ? (
             <p className='text-gray-500'>No components found.</p>
           ) : (
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
               {categories.map(([categoryName, components]) => {
                 const image =
-                  categoryMeta[categoryName]?.image ?? '/thumbnails/default.png'
+                  categoriesAlpineComponents[categoryName]?.thumbnail ??
+                  '/thumbnails/default.png'
                 return (
                   <ComponentCard
                     key={categoryName}
                     title={categoryName}
-                    to={`/components/${categoryName.toLowerCase()}`}
+                    to={`/alpine-components/${categoryName.toLowerCase()}`}
                     componentCount={components.length.toString()}
                     image={image}
                   />
@@ -89,4 +90,4 @@ const Components = () => {
   )
 }
 
-export default Components
+export default AlpineComponents
